@@ -1,0 +1,6 @@
+@Infrastructure.DB.InMemory_HostAddress = http://localhost:5068
+
+GET {{Infrastructure.DB.InMemory_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
