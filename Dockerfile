@@ -22,4 +22,5 @@ RUN dotnet publish "./Infrastructure.DB.InMemory.csproj" -c $BUILD_CONFIGURATION
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV ASPNETCORE_HTTP_PORTS="1818"
 ENTRYPOINT ["dotnet", "Infrastructure.DB.InMemory.dll"]
